@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERAL -->
+    <string name="app_name">Techserv</string>
+    
+    <!-- LOGIN -->
+	<string name="login">Login</string>
+    <string name="user_id">User Id</string>
+    <string name="password">Password</string>
+
+    <string name="drawer_open">Open</string>  
+    <string name="drawer_close">Close</string> 
+</resources>

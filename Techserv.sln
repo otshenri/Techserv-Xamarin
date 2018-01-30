@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techserv", "Techserv\Techserv.csproj", "{A5E78D3A-86D7-4995-BD01-FC8B142D3D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techserv.Droid", "Droid\Techserv.Droid.csproj", "{5FE1E1CB-30B5-48A6-B244-EBECD3928D48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5E78D3A-86D7-4995-BD01-FC8B142D3D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E78D3A-86D7-4995-BD01-FC8B142D3D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E78D3A-86D7-4995-BD01-FC8B142D3D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E78D3A-86D7-4995-BD01-FC8B142D3D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE1E1CB-30B5-48A6-B244-EBECD3928D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE1E1CB-30B5-48A6-B244-EBECD3928D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE1E1CB-30B5-48A6-B244-EBECD3928D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE1E1CB-30B5-48A6-B244-EBECD3928D48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
