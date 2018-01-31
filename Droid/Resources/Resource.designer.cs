@@ -2667,7 +2667,7 @@ namespace Techserv.Droid
 			public const int pin = 2131230796;
 			
 			// aapt resource value: 0x7f08009c
-			public const int progressBar1 = 2131230876;
+			public const int progress_bar_holder = 2131230876;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
