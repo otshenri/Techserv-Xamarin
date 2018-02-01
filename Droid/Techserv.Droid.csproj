@@ -104,6 +104,10 @@
     <Compile Include="Adapter\JobAdapter.cs" />
     <Compile Include="Model\Job.cs" />
     <Compile Include="Activity\LoginActivity.cs" />
+    <Compile Include="Activity\JobActivity.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Fragment\MerchantFragment.cs" />
+    <Compile Include="Fragment\JobDetailsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -112,7 +116,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\main_screen.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
@@ -125,13 +129,17 @@
     <AndroidResource Include="Resources\layout\nav_header.axml" />
     <AndroidResource Include="Resources\layout\toolbar.axml" />
     <AndroidResource Include="Resources\layout\job_list_item.axml" />
-    <AndroidResource Include="Resources\layout\login.axml" />
+    <AndroidResource Include="Resources\layout\login_screen.axml" />
+    <AndroidResource Include="Resources\layout\job_screen.axml" />
+    <AndroidResource Include="Resources\layout\merchant_fragment.axml" />
+    <AndroidResource Include="Resources\layout\job_details_fragment.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Activity\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Model\" />
     <Folder Include="Adapter\" />
+    <Folder Include="Fragment\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />

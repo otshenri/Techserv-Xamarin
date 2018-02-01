@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/user_id"
-        android:id="@+id/username_edit_text" />
-    <EditText
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:id="@+id/password_edit_text" />
     <Button
         android:text="@string/login"
         android:layout_width="match_parent"
         android:layout_height="48.0dp"
+        android:layout_centerInParent="true"
         android:id="@+id/login_button" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_button"
+        android:hint="@string/password"
+        android:id="@+id/password_edit_text" />
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/password_edit_text"
+        android:hint="@string/user_id"
+        android:id="@+id/username_edit_text" />
     <FrameLayout
         android:id="@+id/progress_bar_holder"
         android:animateLayoutChanges="true"
         android:visibility="gone"
         android:alpha="0.4"
         android:background="#000000"
+        android:elevation="10dp"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ProgressBar
@@ -34,4 +39,4 @@
             android:indeterminate="true"
             android:layout_gravity="center" />
     </FrameLayout>
-</LinearLayout>
+</RelativeLayout>

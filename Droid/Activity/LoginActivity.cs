@@ -1,20 +1,16 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
 
 namespace Techserv.Droid
 {
-    [Activity(Label = "LoginActivity", MainLauncher = true)]
+    [Activity(Label = "LoginActivity", MainLauncher = true, Theme = "@style/Theme.Techserv")]
     public class LoginActivity : Activity
     {
         FrameLayout progressBarHolder;
@@ -28,7 +24,7 @@ namespace Techserv.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle); 
-            SetContentView(Resource.Layout.login);
+            SetContentView(Resource.Layout.login_screen);
             SetupBtnAndFields();
         }
 
@@ -38,6 +34,8 @@ namespace Techserv.Droid
             loginBtn = FindViewById<Button>(Resource.Id.login_button);
             usernameEditText = FindViewById<EditText>(Resource.Id.username_edit_text);
             passwordEditText = FindViewById<EditText>(Resource.Id.password_edit_text);
+
+            usernameEditText.RequestFocus();
 
             loginBtn.Click += delegate
             {
@@ -65,10 +63,11 @@ namespace Techserv.Droid
 
         private Boolean IsCorrectCredentials(String username, String password)
         {
-            ShowProgressBar();
-
+            //ShowProgressBar();
             //TODO: Check login information here
-            return false;
+            FakeConnection();
+            //HideProgressBar();
+            return true;
         }
 
         void ShowProgressBar()
@@ -85,6 +84,16 @@ namespace Techserv.Droid
             inAnimation.Duration = 200;
             progressBarHolder.Animation = outAnimation;
             progressBarHolder.Visibility = ViewStates.Gone;
+        }
+
+        public async Task FakeConnection()
+        {
+            ShowProgressBar();
+            await Task.Run(async () =>
+            {
+                await Task.Delay(2000);
+            });
+            HideProgressBar();
         }
     }
 }

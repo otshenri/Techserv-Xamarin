@@ -13,6 +13,7 @@ using Android.Widget;
 
 using Techserv.Droid.Adapter;
 using Techserv.Droid.Model;
+using Android.Content;
 
 namespace Techserv.Droid
 {
@@ -30,7 +31,7 @@ namespace Techserv.Droid
         {  
             base.OnCreate(bundle);
             // Set our view from the "main" layout resource  
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.main_screen);
             SetupDrawer();
             SetupListView();
         }  
@@ -70,12 +71,24 @@ namespace Techserv.Droid
             listView = (ListView) FindViewById<ListView>(Resource.Id.job_listview);
 
             mListItems = new List<Job>();
-            mListItems.Add(new Job(1));
+            mListItems.Add(new Job(100101));
 
             JobAdapter adapter = new JobAdapter(this, mListItems);
-
-            //listView.SetAdapter(adapter);
             listView.Adapter = adapter;
+
+            listView.ItemClick += (sender, e) =>
+            {
+                long id = listView.GetItemIdAtPosition(e.Position);
+                PresentJobActivity(id);
+            };
+        }
+
+        void PresentJobActivity(long jobId)
+        {
+            var intent = new Intent(this, typeof(JobActivity));
+            intent.SetFlags(ActivityFlags.NewTask);
+            intent.PutExtra(Constants.JOB_ID, jobId);
+            StartActivity(intent);
         }
     }
 }

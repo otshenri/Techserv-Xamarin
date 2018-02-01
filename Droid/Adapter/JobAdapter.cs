@@ -47,7 +47,8 @@ namespace Techserv.Droid.Adapter
                 holder = view.Tag as JobViewHolder;
             }
 
-            holder.Name.Text = "test";
+            //TODO: Set real attributes of Job to correct views which also need to be added to xml.
+            holder.Name.Text = jobs[position].Id.ToString();
 
             return view;
         }
