@@ -73,6 +73,7 @@ namespace Techserv.Droid
             mListItems = new List<Job>();
             mListItems.Add(new Job(100101));
 
+
             JobAdapter adapter = new JobAdapter(this, mListItems);
             listView.Adapter = adapter;
 
